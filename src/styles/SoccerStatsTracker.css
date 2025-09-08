@@ -1,0 +1,645 @@
+/* Northwestern Stats Tracker CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0;
+}
+
+.game-setup {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #4c1d95;
+}
+
+.setup-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.setup-description {
+  color: #6b7280;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.opponent-input-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.opponent-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.opponent-input:focus {
+  border-color: #4c1d95;
+}
+
+.validation-warning {
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.match-preview {
+  background-color: #f3f4f6;
+  border: 2px solid #4c1d95;
+  color: #4c1d95;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.preview-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.preview-teams {
+  text-align: center;
+}
+
+.team-northwestern {
+  font-weight: bold;
+  color: #4c1d95;
+}
+
+.team-vs {
+  margin: 0 15px;
+  color: #6b7280;
+}
+
+.team-opponent {
+  font-weight: bold;
+  color: #374151;
+}
+
+.current-match {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px solid #4c1d95;
+}
+
+.current-match-content {
+  text-align: center;
+}
+
+.current-match-teams {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4c1d95;
+  margin-bottom: 10px;
+}
+
+.score-timer-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.score-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 15px;
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  font-family: monospace;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.game-status {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn-start {
+  background-color: #16a34a;
+  color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.btn-pause {
+  background-color: #eab308;
+  color: white;
+}
+
+.btn-pause:hover {
+  background-color: #ca8a04;
+}
+
+.btn-stop {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-stop:hover {
+  background-color: #b91c1c;
+}
+
+.btn-reset {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #4b5563;
+}
+
+.action-controls {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.action-controls-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 20px;
+}
+
+.player-input-section {
+  margin-bottom: 25px;
+}
+
+.player-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.player-input:focus {
+  border-color: #4c1d95;
+}
+
+.teams-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.northwestern-actions {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 25px;
+  border: 2px solid #4c1d95;
+}
+
+.opponent-actions {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 25px;
+  border: 2px solid #9ca3af;
+}
+
+.team-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.team-title-northwestern {
+  color: #4c1d95;
+}
+
+.team-title-opponent {
+  color: #374151;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.action-btn {
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  color: white;
+  position: relative;
+}
+
+.action-count-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #4c1d95;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.btn-goal {
+  background-color: #16a34a;
+}
+
+.btn-goal:hover {
+  background-color: #15803d;
+}
+
+.btn-yellow {
+  background-color: #eab308;
+}
+
+.btn-yellow:hover {
+  background-color: #ca8a04;
+}
+
+.btn-red {
+  background-color: #dc2626;
+}
+
+.btn-red:hover {
+  background-color: #b91c1c;
+}
+
+.btn-orange {
+  background-color: #ea580c;
+}
+
+.btn-orange:hover {
+  background-color: #c2410c;
+}
+
+.btn-blue {
+  background-color: #2563eb;
+}
+
+.btn-blue:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-purple {
+  background-color: #9333ea;
+}
+
+.btn-purple:hover {
+  background-color: #7c3aed;
+}
+
+.btn-indigo {
+  background-color: #4f46e5;
+}
+
+.btn-indigo:hover {
+  background-color: #4338ca;
+}
+
+.btn-gray {
+  background-color: #6b7280;
+}
+
+.btn-gray:hover {
+  background-color: #4b5563;
+}
+
+.action-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.undo-btn {
+  background-color: #dc2626;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.undo-btn:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.undo-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.action-count {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.recent-actions {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.recent-actions-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 20px;
+}
+
+.no-actions {
+  color: #9ca3af;
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+.action-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.action-item-northwestern {
+  background-color: #f3f4f6;
+  border: 2px solid #4c1d95;
+}
+
+.action-item-opponent {
+  background-color: #f9fafb;
+  border: 2px solid #d1d5db;
+}
+
+.action-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.action-time {
+  font-family: monospace;
+  color: #4c1d95;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.action-description {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.action-player {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.action-timestamp {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.export-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.export-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4c1d95;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-export {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  color: white;
+}
+
+.btn-export:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-export-json {
+  background-color: #2563eb;
+}
+
+.btn-export-json:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.btn-export-csv {
+  background-color: #16a34a;
+}
+
+.btn-export-csv:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.export-note {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .header-card {
+    padding: 20px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .sub-title {
+    font-size: 1.2rem;
+  }
+  
+  .score-display {
+    font-size: 3rem;
+  }
+  
+  .timer-display {
+    font-size: 2rem;
+  }
+  
+  .teams-actions {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+  
+  .action-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .action-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
